@@ -1,3 +1,3 @@
 # helloworld
 
-Tylko się uczę!
+Tylko się uczę C++ i gita!
