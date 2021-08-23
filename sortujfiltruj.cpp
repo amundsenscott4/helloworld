@@ -44,7 +44,19 @@ int szukaj_max(int* a, int start, int finish){
     for (int i=start; i<finish; i++){
         if (a[i]>max){
             max=a[i];
-            indeks =i;
+            indeks=i;
+        }
+    };
+    return indeks;
+}
+
+int szukaj_min(int* a, int start, int finish){
+    int min=a[start];
+    int indeks=start;
+    for (int i=start; i<finish; i++){
+        if (a[i]<min){
+            min=a[i];
+            indeks=i;
         }
     };
     return indeks;
@@ -70,7 +82,7 @@ int main() {
         {10, 2, 8, 3, 3, 14, 4, 7, 5, 9},
         {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
         {5, 1, 2, 3, 4, 6, 7, 8, 9, 10},
-        {10, 2, 8, 3, 3, 14, 4, 7, 5, 9},
+        {7, 6, 3, 15, 12, 14, 4, 8, 5, 9},
         {10, 2, 8, 3, 3, 14, 4, 7, 5, 9},
         {10, 2, 8, 3, 3, 14, 4, 7, 5, 9},
         {10, 2, 8, 3, 3, 14, 4, 7, 5, 9},
@@ -83,7 +95,7 @@ int main() {
     //     wypisz(sortuj_inaczej(test[i], 0, k), 0, k);
     // }
     for (int i=0; i<8; i++){
-        cout << szukaj_max(test[i], 0, k) << "\n";
+        cout << szukaj_min(test[i], 0, k) << "\n";
 
     }
 
