@@ -3,18 +3,6 @@ using namespace std;
 
 #define max 8
 
-class nowastruktura {
-    private:
-        int pamiec;
-    public:
-        void zapamietaj(int i) {
-            pamiec = i;
-        }
-        void hello() {
-            cout << "Pamietam: " << pamiec << "\n";
-        }
-};
-
 class multilicznik {
     private:
         int keys[8];
@@ -53,14 +41,6 @@ class multilicznik {
 
 int main() {
 
-    nowastruktura a;
-    nowastruktura b;
-    a.zapamietaj(123);
-    a.hello();
-    b.zapamietaj(234);
-    b.hello();
-    a.hello();
-
     multilicznik c;
     multilicznik d;
 
@@ -74,7 +54,6 @@ int main() {
     c.print();
     d.print();
 
-
-
     return 0;
+    
 }
