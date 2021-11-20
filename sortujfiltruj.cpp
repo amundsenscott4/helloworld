@@ -63,11 +63,9 @@ int szukaj_min(int* a, int start, int finish){
 }
 
 int* sortuj_inaczej(int* a, int start, int finish){
-    // inny sposób sortowania
     if (start>=finish){
         return a;
     }
-    // start<finish
     return filtruj(
         sortuj_inaczej(a, start+1, finish),
         start,
@@ -89,14 +87,10 @@ int main() {
         {10, 2, 8, 3, 3, 14, 4, 7, 5, 9}
     };
 
-    // for (int i=0; i<8; i++) {
-    //     cout << i << "\n";
-    //     wypisz(test[i], 0, k);
-    //     wypisz(sortuj_inaczej(test[i], 0, k), 0, k);
-    // }
-    for (int i=0; i<8; i++){
-        cout << szukaj_min(test[i], 0, k) << "\n";
-
-    }
+    for (int i=0; i<8; i++) {
+         cout << i << "\n";
+         wypisz(test[i], 0, k);
+         wypisz(sortuj_babelkowo(test[i], 0, k), 0, k);
+     }
 
 }
