@@ -1,3 +1,6 @@
 # helloworld
+# helloworld
 
-Tylko się uczę C++ i gita!
+https://www.onlinegdb.com
+
+https://www.tutorialspoint.com/execute_basic_online.php
