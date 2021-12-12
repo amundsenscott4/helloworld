@@ -34,3 +34,6 @@
 # Visual Studio Code
 settings.json
 .gitignore
+
+# ?
+c_cpp_properties.json
