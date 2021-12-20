@@ -30,9 +30,22 @@ void wypisz_odwrotnie(string s) {
 }
 
 string odwroc(string s) {
+    /* wersja 1
     string r = s;
     for (int i=0; i<=(s.length()-1); i++) {
         r[i] = s[(s.length()-1) - i];
+    }
+    */
+    /* wersja 2
+    string r = "";
+    for (int i=0; i<=(s.length()-1); i++) {
+        r = r + s[(s.length()-1) - i];
+    }
+    */
+    /* wersja 3 */
+    string r = "";
+    for (int i=(s.length()-1); i>=0; i--) {
+        r = r + s[i];
     }
     return r;
 }
