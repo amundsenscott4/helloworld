@@ -1,3 +1,5 @@
+import random
+
 def mergeSort(myList):
     if len(myList) > 1:
         mid = len(myList) // 2
@@ -17,10 +19,10 @@ def mergeSort(myList):
         
         while i < len(left) and j < len(right):
             if left[i] <= right[j]:
-              # The value from the left half has been used
-              myList[k] = left[i]
-              # Move the iterator forward
-              i += 1
+                # The value from the left half has been used
+                myList[k] = left[i]
+                # Move the iterator forward
+                i += 1
             else:
                 myList[k] = right[j]
                 j += 1
@@ -38,6 +40,7 @@ def mergeSort(myList):
             j += 1
             k += 1
 
-myList = [54,26,93,17,77,31,44,55,20]
+# myList = [54,26,93,17,77,31,44,55,20]
+myList = random.choices(range(1,100), k=20)
 mergeSort(myList)
 print(myList)
