@@ -1,7 +1,4 @@
-print("Hello world")
-
-list = [10, 9, 6, 3, 2]
-# list = []
+import random
 
 def PrintList(mylist):
     for i in range(len(list)):
@@ -13,22 +10,23 @@ def Partition(mylist):
     i = 0
     j = len(mylist)-2
     v = len(mylist)-1
-    while(i <= j):
+    while (i <= j):
         if( (mylist[i] < mylist[v]) and (mylist[j] >= mylist[v]) ):
-            i+=1
-            j-=1
+            i += 1
+            j -= 1
         if( (mylist[i] >= mylist[v]) and (mylist[j] < mylist[v]) ):
             mylist[i], mylist[j] = mylist[j], mylist[i]
-            i=+1
-            j-=1
+            i += 1
+            j -= 1
         if( (mylist[i] < mylist[v]) and (mylist[j] < mylist[v]) ):
-            i+=1
+            i += 1
         if( (mylist[i] >= mylist[v]) and (mylist[j] >= mylist[v]) ):
-            j-=1
+            j -= 1
     mylist[i], mylist[v] = mylist[v], mylist[i]
     return i
 
 def QuickSort(mylist):
+    print(mylist)
     p = Partition(mylist)
     left = mylist[:p-1]
     mid = mylist[p:p]
@@ -38,6 +36,9 @@ def QuickSort(mylist):
     if len(right) > 0: 
         QuickSort(right)
     mylist = left + mid + right
+
+# list = [10, 9, 6, 3, 2]
+list = random.choices(range(1,100), k=10)
 
 print("Default: ")
 print(list)
