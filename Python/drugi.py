@@ -1,12 +1,14 @@
 import random
 
-tablica = [1, 2]
+def swap(t, i, j):
+    t[i], t[j] = t[j], t[i]
 
-print("Hello world")
-
-def swap(t):
-    t[0], t[1] = t[1], t[0]
+tablica = [1, 2, 3, 4, 5, 6, 7, 8]
 
 print(tablica)
-swap(tablica)
+print(tablica[:4])
+print(tablica[4:])
+print(tablica[:-3])
+print(tablica[-3:])
+swap(tablica, 0, 1)
 print(tablica)

@@ -21,28 +21,8 @@ def Partition(A):
     A[i], A[v] = A[v], A[i]
     return i
 
-def QuickSort(A):
-    p = Partition(A)
-    # NIE: A[:p-1]
-    left = A[:p]
-    # A[p] pozostaje niezmieniony
-    right = A[p+1:]
-    if len(left) > 0: 
-        QuickSort(left)
-    if len(right) > 0: 
-        QuickSort(right)
-    # NIE: A = left + mid + right
-    A[:p] = left
-    # A[p] pozostaje niezmieniony
-    A[p+1:] = right
-
-# list = [10, 9, 6, 3, 2]
-list = random.choices(range(1,100), k=10)
-
-print("Input:")
-print(list)
-print(sum(list))
-print("Quick sort:")
-QuickSort(list)
-print(list)
-print(sum(list))
+# myList = [5, 4, 1, 2, 3]
+myList = random.choices(range(1,100), k=10)
+print(myList)
+print(Partition(myList))
+print(myList)
