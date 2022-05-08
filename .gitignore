@@ -35,5 +35,8 @@
 settings.json
 .gitignore
 
+# JetBrains
+.idea
+
 # ?
 c_cpp_properties.json
