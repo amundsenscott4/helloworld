@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int Oblicz(string onp)
+bool Sprawdz(string onp)
 {
 	stack<int> stos;
  	for(int i=0;i<onp.size();i++)
@@ -25,13 +25,16 @@ int Oblicz(string onp)
 			if(onp[i] == '/'){
 				stos.push(arg1/arg2);
             }
-		 }
-	int wart=stos.top();
-	stos.pop();
-	return wart;	   	
+		}
+		if(stos.size() == 1){
+            return true;
+        }	
+        else{
+            return false;
+        }
 }
 int main() {
-    string napis = "123+*";
-    cout << Oblicz(napis);
+    string napis = "123+*-";
+    cout << Sprawdz(napis);
     return 0;
 }
