@@ -11,8 +11,8 @@ int Oblicz(string onp)
 			stos.push(onp[i]-48);
 		}
  		else{
-			int arg2=stos.top(); stos.pop();
-            int arg1=stos.top(); stos.pop();
+			int arg1=stos.top(); stos.pop();
+            int arg2=stos.top(); stos.pop();
             if(onp[i] == '+'){
 				stos.push(arg1+arg2);
             }
@@ -25,13 +25,17 @@ int Oblicz(string onp)
 			if(onp[i] == '/'){
 				stos.push(arg1/arg2);
             }
+			if(onp[i] == 's'){
+				int arg3=stos.top(); stos.pop();
+				stos.push((arg1+arg2+arg3)/3);
+			}
 		 }
 	int wart=stos.top();
 	stos.pop();
 	return wart;	   	
 }
 int main() {
-    string napis = "123+*";
+    string napis = "246s1+";
     cout << Oblicz(napis);
     return 0;
 }
